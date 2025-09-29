@@ -1,85 +1,73 @@
-Notas de Atletas: Cálculo de Média Olímpica 🏅
+# Notas de Atletas: Cálculo de Média Olímpica 🏅
 
-[JavaScript Badge]
+![Linguagem](https://img.shields.io/badge/Linguagem-JavaScript-F7DF1E?style=for-the-badge&logo=javascript)
+![Status](https://img.shields.io/badge/Status-Concluído-4CAF50?style=for-the-badge)
 
-🌟 Resumo do Projeto
+> Projeto para calcular a média de notas de atletas em uma competição de ginástica, descartando a maior e a menor nota, conforme a regra da média olímpica.
 
-Este projeto consiste em uma aplicação JavaScript pura desenvolvida para
-calcular a média de notas de atletas de uma competição de ginástica
-artística. O desafio principal foi implementar a regra de avaliação que
-desconsidera a nota mais alta e a mais baixa antes de calcular a média
-final.
+---
 
-🤸 Regra de Avaliação
+### 📋 Índice
 
-A competição segue uma regra de pontuação específica baseada em cinco
-notas de jurados:
+*   [🎯 Sobre o Projeto](#-sobre-o-projeto)
+*   [🤸 Regra de Avaliação](#-regra-de-avaliação)
+*   [🛠️ Tecnologias Utilizadas](#-tecnologias-utilizadas)
+*   [🚀 Como Executar](#-como-executar)
+*   [🧠 Aprendizados](#-aprendizados)
+*   [🖥️ Saída no Console](#-saída-no-console)
+*   [👨‍💻 Autor](#-autor)
 
--   Total de Notas: Cada atleta recebe 5 notas (de 1 a 10)
--   Filtragem: A maior e a menor nota são eliminadas
--   Cálculo da Média: A média final é calculada usando apenas as três
-    notas centrais restantes
+---
 
-🛠️ Tecnologias Utilizadas
+### 🎯 Sobre o Projeto
 
-  -----------------------------------------------------------------------
-  Tecnologia                          Descrição
-  ----------------------------------- -----------------------------------
-  JavaScript                          Linguagem principal para toda a
-                                      lógica de processamento e cálculo
-                                      de dados
+Este projeto consiste em uma aplicação em JavaScript puro que processa uma lista de atletas e suas notas. O principal desafio foi implementar a lógica de cálculo da **média olímpica**, que desconsidera a nota mais alta e a mais baixa antes de calcular a média final das três notas restantes.
 
-  -----------------------------------------------------------------------
+### 🤸 Regra de Avaliação
 
-🧠 O que Aprendi (Foco DEVstart)
+A competição segue uma regra de pontuação específica baseada em cinco notas de jurados:
 
-Este projeto foi fundamental para solidificar conceitos essenciais de
-manipulação de dados em JavaScript, importantes para o desenvolvimento
-Frontend:
+> -   **Total de Notas:** Cada atleta recebe 5 notas.
+> -   **Filtragem:** A maior e a menor nota são eliminadas.
+> -   **Cálculo da Média:** A média final é calculada usando apenas as três notas centrais restantes.
 
-1. Manipulação Avançada de Arrays
+### 🛠️ Tecnologias Utilizadas
 
--   Iteração (for...of): Aprendi a percorrer eficientemente um array de
-    objetos complexos (a lista de atletas)
--   Cópia de Arrays (.slice()): Usei Array.prototype.slice() para criar
-    uma cópia rasa do array de notas, garantindo a integridade dos dados
-    de exibição
--   Ordenação Personalizada (.sort()): Utilizei o .sort((a, b) => a - b)
-    com função de comparação para ordenação correta de valores numéricos
--   Filtragem de Subconjuntos (.slice(1, 4)): Apliquei o método .slice()
-    com índices específicos para isolar as três notas centrais após a
-    ordenação
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-2. Funções e Lógica Condicional
+*   **JavaScript:** Linguagem principal para toda a lógica de processamento e cálculo de dados.
+*   **Node.js:** Ambiente para execução do script.
 
--   Modularização: Criei uma função principal (processarNotasAtletas)
-    para encapsular toda a lógica de cálculo
--   Acumulação de Valores (.forEach()): Usei o .forEach() para iterar
-    sobre as notas válidas e somar seus valores
+### 🚀 Como Executar
 
-3. Estruturas de Dados
+1.  Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+2.  Clone o repositório ou baixe os arquivos.
+3.  Abra o terminal na pasta do projeto e execute o seguinte comando:
 
--   Trabalho com Objetos e Arrays Aninhados: Pratiquei a navegação e
-    extração de dados de uma estrutura Array de Objetos, acessando
-    propriedades aninhadas como atleta.nome e atleta.notas
+```bash
+node notas-atletas.js
+```
 
-⚙️ Como o Código Funciona
+### 🧠 Aprendizados
 
-O fluxo lógico para calcular a média de cada atleta é o seguinte:
+Este projeto foi fundamental para solidificar conceitos essenciais de manipulação de dados em JavaScript:
 
-1.  Iteração: Percorre a lista de atletas
-2.  Cópia e Ordenação: Cria uma cópia das notas e as ordena
-3.  Seleção: Usa .slice(1, 4) para obter as 3 notas centrais (índices 1,
-    2 e 3)
-4.  Soma: Soma as notas centrais
-5.  Média: Divide a soma por 3
-6.  Saída: Exibe o resultado no console
+*   **Manipulação Avançada de Arrays:**
+    *   **Iteração (`for...of`):** Para percorrer eficientemente um array de objetos.
+    *   **Cópia de Arrays (`.slice()`):** Para criar uma cópia do array de notas, preservando o array original.
+    *   **Ordenação (`.sort()`):** Para ordenar valores numéricos corretamente com uma função de comparação `(a, b) => a - b`.
+    *   **Seleção (`.slice(1, 4)`):** Para extrair as três notas centrais após a ordenação.
+*   **Funções e Lógica de Programação:**
+    *   **Modularização:** Encapsulamento de toda a lógica na função `processarNotasAtletas`.
+    *   **Acumulação de Valores:** Uso do `.forEach()` para somar as notas válidas.
+*   **Estruturas de Dados:**
+    *   Prática na manipulação de um array de objetos, acessando propriedades aninhadas como `atleta.nome` e `atleta.notas`.
 
-🖥️ Saída (Resultado no Console)
+### 🖥️ Saída no Console
 
-O projeto processa os dados de entrada e gera a seguinte saída no
-console:
+A execução do script gera a seguinte saída:
 
+```
     Atleta: Cesar Abascal
     Notas Obtidas: 10,9.34,8.42,10,7.88
     Média Válida: 9.253333333333334
@@ -95,9 +83,7 @@ console:
     Atleta: Bruno Castro
     Notas Obtidas: 10,10,10,9,9.5
     Média Válida: 9.833333333333334
-
-------------------------------------------------------------------------
-
-👨‍💻 Desenvolvido por joaomaxdev
-Projeto desenvolvido como parte do programa DEVstart - JavaScript
-Frontend
+```
+---
+### 👨‍💻 Autor
+Desenvolvido por **joaomaxdev** como parte do programa **DEVstart - JavaScript Frontend**.
